@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ConnorLuck
 {
 
     public class PuddleDeath : MonoBehaviour
     {
-        private void OnCollisionEnter(Collision collision)
+        public GameObject Puddle;
+
+        private void OnCollisionEnter(Collision _collision)
         {
-            Debug.Log("You Slipped!");
+            // this kills the character and sends them to the kill screen
+            SceneManager.LoadScene("KillScreen");
+
         }
     }
 

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/FirstShiftScenes/FirstShift.unity
+    guid: 857da25b31149b4419bf499644cddec1
+  - enabled: 1
+    path: Assets/FirstShiftScenes/KillScreen.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/FirstShiftScenes/StartMenuScript.unity
+    guid: e53adeb3ef10c214a8fa4876ab028993
   m_configObjects: {}
