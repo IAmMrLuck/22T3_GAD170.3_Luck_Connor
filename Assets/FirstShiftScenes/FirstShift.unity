@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 318503485}
   - component: {fileID: 318503484}
   - component: {fileID: 318503483}
+  - component: {fileID: 318503487}
   m_Layer: 0
   m_Name: ButtonForDoor
   m_TagString: Untagged
@@ -611,13 +612,25 @@ Transform:
   m_GameObject: {fileID: 318503482}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 27.2, y: 8, z: -32.2}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 5, y: 0.5704812, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1629849762}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &318503487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318503482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f19079a883dab488ea67e373ca2752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418647579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2193,7 @@ GameObject:
   - component: {fileID: 2066425924}
   - component: {fileID: 2066425923}
   - component: {fileID: 2066425922}
+  - component: {fileID: 2066425926}
   m_Layer: 0
   m_Name: SlideDoor
   m_TagString: Untagged
@@ -2258,13 +2272,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066425921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 14.6, z: -35.1}
+  m_LocalPosition: {x: 38.3, y: 14.6, z: -35.1}
   m_LocalScale: {x: 120, y: 30, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2066425926
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066425921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 965444443346287418f8bb4fd01b4d25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7862540893941110214
 PrefabInstance:
   m_ObjectHideFlags: 0
