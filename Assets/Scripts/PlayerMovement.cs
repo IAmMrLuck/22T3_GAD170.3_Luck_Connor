@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
@@ -21,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 12f;
     [SerializeField] private float horizontalSpeed = 2.0f;
     [SerializeField] private float verticalSpeed = 2.0f;
+
+    [SerializeField] GameObject player;
 
     // These two are for the camera movement
     [SerializeField] private float yaw = 0.0f;
@@ -84,5 +88,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Finally, it applies that vector it just made to the character
         characterController.Move(movementVector * movementSpeed * Time.deltaTime + velocity * Time.deltaTime);
+
+        // This checks the players Y position to determine if they've fallen off the map
+        // and then "kills" them and brings them back to the start of the level
+
+        if(player.transform.position.y < -10)
+        {
+            SceneManager.LoadScene("FirstShift");
+        }
     }
 }
