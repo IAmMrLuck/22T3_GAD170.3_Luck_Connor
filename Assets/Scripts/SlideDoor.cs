@@ -9,18 +9,16 @@ using UnityEngine.UIElements;
 public class SlideDoor : MonoBehaviour
 {
 
-    public UnityEvent OnEnterTrigger;
-    private Clickable doorSlider;
-    public bool alreadyEntered = false;
+    private KeyDownEvent doorSlider;
+
+    public KeyDownEvent DoorSlider { get => doorSlider; set => doorSlider = value; }
+
     private void Awake()
 
     {
-        doorSlider = GetComponent<Clickable>();
+        DoorSlider = GetComponent<KeyDownEvent>();
     }
 
-    private void OnPointerClick()
-    {
-        if (doorSlider != null) ;
-    }
+
 
 }
