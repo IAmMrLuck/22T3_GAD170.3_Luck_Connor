@@ -16,7 +16,7 @@ public class SlideDoor : MonoBehaviour
     private void Awake()
 
     {
-        DoorSlider = GetComponent<KeyDownEvent>();
+        //DoorSlider = GetComponent<KeyDownEvent>();
     }
 
 
