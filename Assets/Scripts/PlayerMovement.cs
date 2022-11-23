@@ -89,12 +89,6 @@ public class PlayerMovement : MonoBehaviour
         // Finally, it applies that vector it just made to the character
         characterController.Move(movementVector * movementSpeed * Time.deltaTime + velocity * Time.deltaTime);
 
-        // This checks the players Y position to determine if they've fallen off the map
-        // and then "kills" them and brings them back to the start of the level
-
-        if(player.transform.position.y < -10)
-        {
-            SceneManager.LoadScene("FirstShift");
-        }
+        
     }
 }

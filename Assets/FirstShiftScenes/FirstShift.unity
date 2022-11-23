@@ -549,10 +549,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.86712575
+  m_Height: 15.199901
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: -0.08001385, y: 0.7834981, z: -0.00000009536744}
 --- !u!23 &318503484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1235,6 +1235,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8160453267083905479}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &607636517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607636509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95931e9efab8bcc419e91fd296956e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCharacter: {fileID: 607636509}
 --- !u!1 &647798241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1763,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3324,7 +3337,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3733,6 +3746,16 @@ PrefabInstance:
       objectReference: {fileID: 607636509}
     - target: {fileID: 8160453267257077818, guid: 93f83e6780498194d98873f3c65e1a21,
         type: 3}
+      propertyPath: gravity
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160453267257077818, guid: 93f83e6780498194d98873f3c65e1a21,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160453267257077818, guid: 93f83e6780498194d98873f3c65e1a21,
+        type: 3}
       propertyPath: movementSpeed
       value: 22
       objectReference: {fileID: 0}
@@ -3806,5 +3829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8160453267257078727, guid: 93f83e6780498194d98873f3c65e1a21,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca65048f311b4e947a1dfa20acf2516f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93f83e6780498194d98873f3c65e1a21, type: 3}
