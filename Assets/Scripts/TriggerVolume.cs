@@ -17,6 +17,7 @@ namespace ConnorLuck
         [SerializeField] private bool oneShot = true; // used to turn on or off the option to trigegr this only once
 
 
+
         public GameObject canvas;
         public UnityEvent OnEnterTrigger;
         public UnityEvent OnExitTrigger;
@@ -32,14 +33,19 @@ namespace ConnorLuck
 
             // I'm just making sure that the trigger is activtaing - It Is!
 
+            if (other.gameObject.CompareTag("Player"))
 
             if (oneShot && alreadyEntered) return; // functionality to stop the trigger from firing again if it has been triggered once
 
             Debug.Log("TRIGGER TEST"); // here to test that the Trigger is firing
 
+            // check if player character has collided with trigger 
+
+            
+
             OnEnterTrigger.Invoke();
             canvas.SetActive(true);
-           
+            
             alreadyEntered = true;
 
         }
@@ -49,6 +55,12 @@ namespace ConnorLuck
             OnExitTrigger.Invoke();
             canvas.SetActive(false);
         }
+
+
+
+
+
+
 
 
 

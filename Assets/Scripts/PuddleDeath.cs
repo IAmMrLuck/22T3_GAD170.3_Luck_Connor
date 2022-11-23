@@ -12,6 +12,7 @@ namespace ConnorLuck
 
         private void OnCollisionEnter(Collision _collision)
         {
+            
             // this kills the character and sends them to the kill screen
             SceneManager.LoadScene("KillScreen");
 
