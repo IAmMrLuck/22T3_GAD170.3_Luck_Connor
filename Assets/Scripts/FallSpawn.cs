@@ -17,7 +17,7 @@ namespace ConnorLuck
 
             // This checks the players Y position to determine if they've fallen off the map
             // and then "kills" them and brings them back to the start of the level
-            if (PlayerCharacter.transform.position.y < -10)
+            if (PlayerCharacter.transform.position.y < -30)
             {
                 SceneManager.LoadScene("FirstShift");
             }

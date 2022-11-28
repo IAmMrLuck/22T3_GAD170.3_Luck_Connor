@@ -28,29 +28,24 @@ namespace ConnorLuck
             _collider = GetComponent<Collider>();
             _collider.isTrigger = true;
         }
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider _collider)
         {
 
             // I'm just making sure that the trigger is activtaing - It Is!
-
-            if (other.gameObject.CompareTag("Player"))
-
             if (oneShot && alreadyEntered) return; // functionality to stop the trigger from firing again if it has been triggered once
 
             Debug.Log("TRIGGER TEST"); // here to test that the Trigger is firing
 
             // check if player character has collided with trigger 
 
-            
-
             OnEnterTrigger.Invoke();
             canvas.SetActive(true);
-            
             alreadyEntered = true;
 
+            
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit(Collider _collider)
         {
             OnExitTrigger.Invoke();
             canvas.SetActive(false);
