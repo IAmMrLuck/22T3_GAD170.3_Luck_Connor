@@ -18,11 +18,11 @@ namespace ConnorLuck
 
 
 
-        public GameObject canvas;
-        public UnityEvent OnEnterTrigger;
-        public UnityEvent OnExitTrigger;
+        [SerializeField] private GameObject canvas;
+        [SerializeField] private UnityEvent OnEnterTrigger;
+        [SerializeField] private UnityEvent OnExitTrigger;
         private Collider _collider;
-        public bool alreadyEntered = false;
+        private bool alreadyEntered = false;
         private void Awake()
         {
             _collider = GetComponent<Collider>();

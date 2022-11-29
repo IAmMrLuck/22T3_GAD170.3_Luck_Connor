@@ -9,15 +9,7 @@ using UnityEngine.UIElements;
 public class SlideDoor : MonoBehaviour
 {
 
-    private KeyDownEvent doorSlider;
-
-    public KeyDownEvent DoorSlider { get => doorSlider; set => doorSlider = value; }
-
-    private void Awake()
-
-    {
-        //DoorSlider = GetComponent<KeyDownEvent>();
-    }
+    
 
 
 

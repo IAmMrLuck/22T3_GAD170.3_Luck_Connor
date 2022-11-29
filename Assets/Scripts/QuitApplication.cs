@@ -13,7 +13,7 @@ namespace ConnorLuck
     {
 
         
-             void OnQuitClick()
+             public void OnQuitClick()
             {
 
                 Application.Quit();
