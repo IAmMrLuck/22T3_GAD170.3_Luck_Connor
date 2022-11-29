@@ -9,8 +9,11 @@ using UnityEngine.UIElements;
 public class SlideDoor : MonoBehaviour
 {
 
-    
+    private Animation _animation;
 
-
+    private void Update()
+    {
+        
+    }
 
 }
