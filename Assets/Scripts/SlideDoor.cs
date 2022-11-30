@@ -6,14 +6,20 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class SlideDoor : MonoBehaviour
+namespace ConnorLuck
 {
 
-    private Animation _animation;
 
-    private void Update()
+    public class SlideDoor : MonoBehaviour
     {
-        
+
+        private Animation _animation;
+
+        private void Update()
+        {
+
+        }
+
     }
 
 }
