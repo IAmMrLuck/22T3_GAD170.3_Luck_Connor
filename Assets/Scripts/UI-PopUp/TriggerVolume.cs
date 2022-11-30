@@ -41,14 +41,15 @@ namespace ConnorLuck
             OnEnterTrigger.Invoke();
             canvas.SetActive(true);
             alreadyEntered = true;
-
-            
+                        
         }
 
         private void OnTriggerExit(Collider _collider)
         {
+
             OnExitTrigger.Invoke();
             canvas.SetActive(false);
+
         }
 
 
