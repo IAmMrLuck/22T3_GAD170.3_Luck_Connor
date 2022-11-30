@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.ProBuilder;
+using UnityEngine.TextCore.Text;
 
 namespace ConnorLuck
 {
@@ -9,6 +11,18 @@ namespace ConnorLuck
 
     public class BlockToggler : MonoBehaviour
     {
+
+        private void OnEnable()
+        {
+            BoxOrb.OnKeyDown += TurnTangible;
+        }
+
+
+        private void OnDisable()
+        {
+            BoxOrb.OnKeyDown -= TurnTangible;
+
+        }
 
 
         [SerializeField] private GameObject block;

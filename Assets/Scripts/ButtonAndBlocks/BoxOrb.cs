@@ -10,18 +10,15 @@ namespace ConnorLuck
     public class BoxOrb : MonoBehaviour
     {
 
-        // needs to know which blocks to activate
-        // needs to know which method to call (Intangible or Tangible)
-        [SerializeField] private UnityEvent TurnTangible;
-        private BlockToggler blockToggler;
-        [SerializeField] private BoxOrb transientBlockToActivate;
+        public delegate void EKeyDown();
+        public static event EKeyDown OnKeyDown;
 
-        private void ActivateTransientBlocks()
-
+        private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                TurnTangible.Invoke();
+                if(OnKeyDown != null)
+                OnKeyDown();
 
 
             }

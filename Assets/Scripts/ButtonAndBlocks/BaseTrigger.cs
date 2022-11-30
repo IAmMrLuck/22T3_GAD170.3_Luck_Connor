@@ -1,19 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
-namespace ConnorLuck
-{
+    // prevents this from running without a collider component being attached - just another safety net
+    // it could be further specified to be BoxCollider - but this is not essential
+    [RequireComponent(typeof(Collider))]
 
-    public class SlideDoor : MonoBehaviour
+    public class BaseTrigger : MonoBehaviour
     {
-        private Animator _animation;
-        [SerializeField] private UnityEvent PlayAnimation;
 
         public UnityEvent OnEnterTrigger;
         private Collider _collider;
@@ -22,7 +17,6 @@ namespace ConnorLuck
         {
             _collider = GetComponent<Collider>();
             _collider.isTrigger = true;
-            _animation = gameObject.GetComponent<Animator>();
         }
         private void OnTriggerEnter(Collider other)
         {
@@ -34,21 +28,13 @@ namespace ConnorLuck
 
             OnEnterTrigger.Invoke();
         }
-         
-         public void Update()
-         {
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("Pressed");
-                
-                _animation.Play("DoorSlideAnim");
-
-            }
-         }
-
-        
-
+    private void Update()
+    {
+        if(_collider == false)
+        {
+            GetComponent<Collider>().enabled = true; 
+        }
     }
 
 }
