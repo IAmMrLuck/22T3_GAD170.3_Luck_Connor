@@ -26,18 +26,13 @@ namespace ConnorLuck
         }
         private void OnTriggerEnter(Collider other)
         {
-
             // I'm just making sure that the trigger is activtaing - It Is!
-
-
             Debug.Log("TRIGGER button TEST"); // here to test that the Trigger is firing
-
             OnEnterTrigger.Invoke();
         }
          
          public void Update()
          {
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Pressed");

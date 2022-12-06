@@ -11,19 +11,15 @@ namespace ConnorLuck
 
     public class BlockToggler : MonoBehaviour
     {
-
         private void OnEnable()
         {
             BoxOrb.OnKeyDown += TurnTangible;
         }
 
-
         private void OnDisable()
         {
             BoxOrb.OnKeyDown -= TurnTangible;
-
         }
-
 
         [SerializeField] private GameObject block;
         [SerializeField] private Material tangibleMaterial;
@@ -37,7 +33,6 @@ namespace ConnorLuck
                 block.GetComponent<BoxCollider>().enabled = false;
                 block.GetComponent<MeshRenderer>().material = intangibleMaterial;
             }
-
         }
 
         public void TurnTangible()

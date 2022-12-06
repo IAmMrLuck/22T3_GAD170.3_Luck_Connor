@@ -9,19 +9,15 @@ namespace ConnorLuck
 
     public class BoxOrb : MonoBehaviour
     {
+        [SerializeField] private UnityEvent OnEnterTrigger;
 
         public delegate void EKeyDown();
         public static event EKeyDown OnKeyDown;
 
-        private void Update()
+        public void OnTriggerEnter(Collider other)
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                if(OnKeyDown != null)
-                OnKeyDown();
-
-
-            }
+            OnEnterTrigger.Invoke();
+            
         }
 
     }
