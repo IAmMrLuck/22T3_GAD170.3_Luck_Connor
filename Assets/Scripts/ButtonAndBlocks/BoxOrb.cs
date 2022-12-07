@@ -26,7 +26,7 @@ namespace ConnorLuck
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.name == "PlayerCharacter") ;
+            if (other.gameObject.name == "PlayerCharacter");
                
         }
 
