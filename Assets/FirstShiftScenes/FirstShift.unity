@@ -897,8 +897,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7957022
-  m_Center: {x: 0, y: 0.29570222, z: 0}
+  m_Radius: 2.3154216
+  m_Center: {x: 0.742394, y: 0.29570222, z: 0.77732563}
 --- !u!23 &365910626
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -956,7 +956,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365910624}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -63.977, y: 7.01, z: -91.643}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
@@ -976,21 +976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c23418fe226234aa181f66261d4487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnEnterTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 365910629}
-        m_TargetAssemblyTypeName: ConnorLuck.BoxOrb, Assembly-CSharp
-        m_MethodName: EClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &418647579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613477733}
   m_Layer: 0
-  m_Name: OpenSign
+  m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1914,7 +1899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7594eb75358e12d469d5c6ffbf764f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneShot: 1
   canvas: {fileID: 818767962}
   OnEnterTrigger:
     m_PersistentCalls:
@@ -1931,22 +1915,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnExitTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  displayGizmos: 0
 --- !u!65 &647798243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2998,9 +2966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c23418fe226234aa181f66261d4487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnEnterTrigger:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1362633510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3845,7 +3810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27616
+  m_Name: pb_Mesh41320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4421,7 +4386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7594eb75358e12d469d5c6ffbf764f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneShot: 1
   canvas: {fileID: 225518477}
   OnEnterTrigger:
     m_PersistentCalls:
@@ -4438,22 +4402,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnExitTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  displayGizmos: 0
 --- !u!65 &1825608550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7676,7 +7624,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066425921}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8006,7 +7954,7 @@ PrefabInstance:
     - target: {fileID: 8160453267257078725, guid: 93f83e6780498194d98873f3c65e1a21,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.1
+      value: 95.5
       objectReference: {fileID: 0}
     - target: {fileID: 8160453267257078725, guid: 93f83e6780498194d98873f3c65e1a21,
         type: 3}
@@ -8016,7 +7964,7 @@ PrefabInstance:
     - target: {fileID: 8160453267257078725, guid: 93f83e6780498194d98873f3c65e1a21,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -80.2
+      value: 95.8
       objectReference: {fileID: 0}
     - target: {fileID: 8160453267257078725, guid: 93f83e6780498194d98873f3c65e1a21,
         type: 3}

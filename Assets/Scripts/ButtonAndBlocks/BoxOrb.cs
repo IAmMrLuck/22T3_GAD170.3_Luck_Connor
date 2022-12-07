@@ -9,15 +9,27 @@ namespace ConnorLuck
 
     public class BoxOrb : MonoBehaviour
     {
-        [SerializeField] private UnityEvent OnEnterTrigger;
+
 
         public delegate void EKeyDown();
         public static event EKeyDown OnKeyDown;
 
-        public void OnTriggerEnter(Collider other)
+
+        // if othergameobject.name "player character"
+
+    //{ true or false - checks where the player is 
+
+        // private bool isplayernearby
+
+        // ontriggerenter
+
+
+        private void Update()
         {
-            OnEnterTrigger.Invoke();
-            
+            if(Input.GetKeyUp(KeyCode.E))
+            {
+                OnKeyDown.Invoke();
+            }
         }
 
     }

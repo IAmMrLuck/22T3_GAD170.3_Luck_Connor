@@ -24,7 +24,7 @@ namespace ConnorLuck
             _collider.isTrigger = true;
             _animation = gameObject.GetComponent<Animator>();
         }
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider _collider)
         {
             // I'm just making sure that the trigger is activtaing - It Is!
             Debug.Log("TRIGGER button TEST"); // here to test that the Trigger is firing
@@ -36,7 +36,7 @@ namespace ConnorLuck
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Pressed");
-                
+
                 _animation.Play("DoorSlideAnim");
 
             }

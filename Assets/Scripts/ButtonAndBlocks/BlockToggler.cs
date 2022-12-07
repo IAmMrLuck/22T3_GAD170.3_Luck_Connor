@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.ProBuilder;
 using UnityEngine.TextCore.Text;
+using static ConnorLuck.BoxOrb;
 
 namespace ConnorLuck
 {
@@ -11,19 +13,19 @@ namespace ConnorLuck
 
     public class BlockToggler : MonoBehaviour
     {
-        private void OnEnable()
-        {
-            BoxOrb.OnKeyDown += TurnTangible;
-        }
-
-        private void OnDisable()
-        {
-            BoxOrb.OnKeyDown -= TurnTangible;
-        }
-
         [SerializeField] private GameObject block;
         [SerializeField] private Material tangibleMaterial;
         [SerializeField] private Material intangibleMaterial;
+        [SerializeField] private UnityEvent OnEnterTrigger;
+
+        public void OnEnable()
+        {
+            BoxOrb.OnKeyDown += TurnTangible;
+        }
+        public void OnDisable()
+        {
+            BoxOrb.OnKeyDown -= TurnTangible;
+        }
 
 
         public void TurnIntangible()
