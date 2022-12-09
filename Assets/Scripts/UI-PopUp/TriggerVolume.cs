@@ -17,6 +17,7 @@ namespace ConnorLuck
 
         [SerializeField] private GameObject canvas;
         [SerializeField] private UnityEvent OnEnterTrigger;
+        [SerializeField] private UnityEvent OnExitTrigger;
 
         private Collider _collider;
 
@@ -35,6 +36,13 @@ namespace ConnorLuck
             // check if player character has collided with trigger 
 
             OnEnterTrigger.Invoke(); 
+            canvas.SetActive(true);
+        }
+
+        private void OnTriggerExit(Collider collider)
+        {
+            OnExitTrigger.Invoke();
+            canvas?.SetActive(false);
         }
     }
 }

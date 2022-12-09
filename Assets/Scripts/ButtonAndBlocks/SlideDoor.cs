@@ -12,6 +12,8 @@ namespace ConnorLuck
 
     public class SlideDoor : MonoBehaviour
     {
+        [SerializeField] private bool isPlayerCharacterNearby = false;
+
         private Animator _animation;
         [SerializeField] private UnityEvent PlayAnimation;
 
@@ -26,14 +28,19 @@ namespace ConnorLuck
         }
         private void OnTriggerEnter(Collider _collider)
         {
-            // I'm just making sure that the trigger is activtaing - It Is!
-            Debug.Log("TRIGGER button TEST"); // here to test that the Trigger is firing
-            OnEnterTrigger.Invoke();
+            if (_collider.gameObject.name == "PlayerCharacter") ;
+            isPlayerCharacterNearby = true;
         }
-         
+
+        private void OnTriggerExit(Collider _collider)
+        {
+            if (_collider.gameObject.name == "PlayerCharacter") ;
+            isPlayerCharacterNearby = false;
+        }
+        
          public void Update()
          {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && isPlayerCharacterNearby == true)
             {
                 Debug.Log("Pressed");
 
